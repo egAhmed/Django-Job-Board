@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'job',
     'bootstrap4',
     'widget_tweaks',
+    'contact',
+    'django_filters',
     
 ]
 
