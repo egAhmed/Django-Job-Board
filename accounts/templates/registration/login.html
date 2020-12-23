@@ -1,6 +1,6 @@
-{% extends "base.html" %}
-
-{% block content %}
+{% extends "base_accounts.html" %}
+{% load bootstrap4 %}
+{% block body %}
 
   {% if form.errors %}
     <p>Your username and password didn't match. Please try again.</p>
@@ -17,17 +17,10 @@
 
   <form method="post" action="{% url 'login' %}">
     {% csrf_token %}
-    <table>
-      <tr>
-        <td>{{ form.username.label_tag }}</td>
-        <td>{{ form.username }}</td>
-      </tr>
-      <tr>
-        <td>{{ form.password.label_tag }}</td>
-        <td>{{ form.password }}</td>
-      </tr>
-    </table>
-    <input type="submit" value="login" />
+    {% bootstrap_form form %}
+    {% buttons %}
+        <input class="boxed-btn3 w-100" type="submit" value="login" />
+    {% endbuttons %}
     <input type="hidden" name="next" value="{{ next }}" />
   </form>
 

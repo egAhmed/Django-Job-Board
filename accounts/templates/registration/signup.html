@@ -1,11 +1,11 @@
 {% extends "base_accounts.html" %}
 {% load bootstrap4 %}
 {% block body %}
-  <form action="" method="post">
+  <form  method="post">
   {% csrf_token %}
   {% bootstrap_form form %}
     {% buttons %}
-    <input class="boxed-btn3 w-100" type="submit"  value="Change password">
+    <input class="boxed-btn3 w-100" type="submit"  value="signup">
     {% endbuttons %}
     
   </form>
