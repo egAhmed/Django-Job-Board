@@ -2,6 +2,7 @@ from django.db import models
 from django.utils.text import slugify
 from django.contrib.auth.models import User
 
+
 # Create your models here.
 
 JOB_TYPE = (
@@ -52,7 +53,7 @@ class Apply(models.Model):
     name = models.CharField(max_length=50)
     email = models.EmailField(max_length=100)
     webiste = models.URLField()
-    #cv = models.FileField(upload_to='apply/')
+    cv = models.FileField(upload_to='apply/')
     cover_letter = models.TextField(max_length=500)
     created_at = models.DateTimeField(auto_now=True)
 

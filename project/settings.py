@@ -38,7 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # my-app
-    'job'
+    'job',
+    'bootstrap4',
+    'widget_tweaks',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -127,3 +130,5 @@ STATICFILES_DIRS  = [
 
 MEDIA_URL = '/ media /'
 MEDIA_ROOT =  BASE_DIR / 'media'
+
+LOGIN_REDIRECT_URL = '/'
